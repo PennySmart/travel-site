@@ -15,11 +15,11 @@ var config = {
         }
     }
 gulp.task('beginClean', function() {
-    return del(['./app/temp/sprite' , './app/assets/images/sprites']);
+    return del(['./app/temp/sprite', './app/assets/images/sprites']);
 });
 
 gulp.task('createSprite',['beginClean'], function() {
-    return gulp.src('./app/assets/images/icons/**/*.svg')
+        return gulp.src('./app/assets/images/icons/**/*.svg')
         .pipe(svgSprite(config))
         .pipe(gulp.dest('./app/temp/sprite/'));
 });
